@@ -146,7 +146,6 @@ pygame.init()
 
 font40 = pygame.font.Font('/Users/nmacrii/Desktop/PixelEmulator.ttf', 40)
 font30 = pygame.font.Font('/Users/nmacrii/Desktop/PixelEmulator.ttf', 30)
-font20 = pygame.font.Font('/Users/nmacrii/Desktop/PixelEmulator.ttf', 20)
 
 screen = pygame.display.set_mode((650, 825))
 screen.fill(BLACK)
@@ -155,18 +154,12 @@ screen.fill(BLACK)
 logo = font40.render('MasterMind', True, WHITE)
 screen.blit(logo, logo.get_rect(center=(325, 15)))
 
-
-
-
 ######################################################## grid ##########################################################
 pygame.draw.line(screen, WHITE, (0, 36), (650, 36))
 pygame.draw.line(screen, WHITE, (164, 65), (164, 685))
 pygame.draw.line(screen, WHITE, (488, 65), (488, 685))
 for i in range(1, 8):
     pygame.draw.line(screen, WHITE, (35, 65+78*i), (615, 65+78*i))
-
-######################################################## lower circles #################################################
-
 
 ###################################################### border ##########################################################
 draw_box(325, 375, 600, 640, 30)
@@ -183,6 +176,8 @@ try_nr = 0
 while True:
 
     mouse = pygame.mouse.get_pos()
+
+##################################################### render buttons ###################################################
     if 0 <= mouse[0] <= 150 and 0 <= mouse[1] <= 36:
         pygame.draw.rect(screen, BLACK, pygame.Rect(0, 0, 150, 36))
         screen.blit(font30.render('auto', True, WHITE), (30, 0))
@@ -225,7 +220,6 @@ while True:
         draw_big_circle(YELLOW, 60 + 106 * 5, 760)
         screen.blit(font40.render('Y', True, BLACK), (48 + 106 * 5, 735))
 
-
     if 340 <= mouse[0] <= 440 and 710 <= mouse[1] <= 810 and len(your_try) < 4:
         draw_big_circle(WHITE, 60 + 106 * 3, 760)
         screen.blit(font40.render('C', True, CYAN), (45 + 106 * 3, 735))
@@ -242,6 +236,7 @@ while True:
 
     for event in pygame.event.get():
         if event.type == MOUSEBUTTONDOWN:
+##################################################### logic behind buttons ###################################################
             if 0 <= mouse[0] <= 150 and 0 <= mouse[1] <= 36:
                 for j in range(8):
                     for i in range(4):
