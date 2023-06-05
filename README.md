@@ -13,12 +13,6 @@ Clone the project
   git clone https://github.com/auperman-lab/mastermind
 ```
 
-Go to the project directory
-
-```bash
-  cd mastermind
-```
-
 Install dependencies
 
 ```bash
@@ -27,6 +21,10 @@ Install dependencies
 
 Run the game
 
+```bash
+  python3 mastermind/Mastermind color.py
+```
+
 
 
 
@@ -34,11 +32,11 @@ Run the game
 
 Game Screenshot
 
-<img src="https://github.com/auperman-lab/mastermind/assets/121299815/3f173d70-8aa8-493b-b9d1-07b81135122b" alt="alt text" width="600" height="600">
+<img src="https://github.com/auperman-lab/mastermind/assets/121299815/3f173d70-8aa8-493b-b9d1-07b81135122b" alt="alt text" width="400" height="600">
 
 Win Screen
 
-<img src="https://github.com/auperman-lab/mastermind/assets/121299815/df7f337e-6539-422c-862b-219ee9970a5c" alt="altr text" width="600" height="600">
+<img src="https://github.com/auperman-lab/mastermind/assets/121299815/df7f337e-6539-422c-862b-219ee9970a5c" alt="altr text" width="400" height="600">
 
 
 ## Features
